@@ -20,7 +20,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&bg_color=0b1120&title_color=22d3ee&icon_color=a78bfa&text_color=e6edff&border_color=21305e
           path: profile/stats-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_STATS }}
 
       - name: Generate stats card (light)
         uses: readme-tools/github-readme-stats-action@v1
@@ -28,7 +28,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&bg_color=f8fafc&title_color=0d7e8f&icon_color=7c3aed&text_color=334155&border_color=dbe2ef
           path: profile/stats-light.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_STATS }}
 
       - name: Generate top languages card (dark)
         uses: readme-tools/github-readme-stats-action@v1
@@ -36,7 +36,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&bg_color=0b1120&title_color=22d3ee&text_color=e6edff&border_color=21305e
           path: profile/top-langs-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_STATS }}
 
       - name: Generate top languages card (light)
         uses: readme-tools/github-readme-stats-action@v1
@@ -44,7 +44,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&bg_color=f8fafc&title_color=0d7e8f&text_color=334155&border_color=dbe2ef
           path: profile/top-langs-light.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_STATS }}
 
       - name: Commit cards
         run: |
