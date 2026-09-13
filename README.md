@@ -15,12 +15,6 @@
   (OAuth2/OIDC, passkeys/WebAuthn) serving <b>100K+ users</b>. Hands-on with <b>Java, Go, Kubernetes and AWS</b>.
 </p>
 
-<p align="center">
-  I architected the Secure Release Manager — a supply-chain security platform productized for enterprise customers — and
-  design systems end-to-end, from greenfield design through production rollout. I write deep-dive engineering articles on
-  <a href="https://vinodatwal.medium.com/">Medium</a> about distributed systems, security, and databases.
-</p>
-
 <br>
 
 <h2 align="center">Featured projects</h2>
@@ -86,37 +80,25 @@
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL">
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash">
-  <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua">
 </p>
 
 <p align="center">
-  <b>Frameworks, data & messaging</b><br>
+  <b>Backend & data</b><br>
   <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring Boot">
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
   <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis">
   <img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka">
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-  <img src="https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="Elasticsearch">
 </p>
 
 <p align="center">
-  <b>Cloud, platforms & observability</b><br>
-  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black" alt="AWS">
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana">
-  <img src="https://img.shields.io/badge/APISIX-00264B?style=for-the-badge&logo=apacheapisix&logoColor=white" alt="Apache APISIX">
-</p>
-
-<p align="center">
-  <b>Security & identity</b><br>
+  <b>Security, cloud & identity</b><br>
   <img src="https://img.shields.io/badge/SLSA%20L3-0ea5e9?style=for-the-badge" alt="SLSA L3">
   <img src="https://img.shields.io/badge/SBOM%20%2F%20VEX-22d3ee?style=for-the-badge" alt="SBOM/VEX">
   <img src="https://img.shields.io/badge/PKI%20%26%20Code%20Signing-7c3aed?style=for-the-badge" alt="PKI & Code Signing">
   <img src="https://img.shields.io/badge/OAuth2%20%2F%20OIDC-312e81?style=for-the-badge" alt="OAuth2/OIDC">
-  <img src="https://img.shields.io/badge/WebAuthn%20%2F%20FIDO2-171717?style=for-the-badge" alt="WebAuthn/FIDO2">
-  <img src="https://img.shields.io/badge/AI%20Agent%20Workflows-64748b?style=for-the-badge" alt="AI Agent Workflows">
+  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black" alt="AWS">
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes">
 </p>
 
 <br>
