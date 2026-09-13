@@ -129,6 +129,18 @@ main {
   backdrop-filter: blur(24px) saturate(200%);
   -webkit-backdrop-filter: blur(24px) saturate(200%);
   transition: transform 0.2s ease, color 0.3s ease;
+  animation: fadeIn 0.5s ease 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .theme-toggle:hover {
@@ -536,12 +548,18 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .blob,
   .avatar-wrap,
-  .reveal {
+  .reveal,
+  .theme-toggle {
     animation: none;
     transition: none;
   }
 
   .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .theme-toggle {
     opacity: 1;
     transform: none;
   }
