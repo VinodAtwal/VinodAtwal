@@ -5,6 +5,9 @@
 **Senior Software Engineer** — Software Supply-Chain Security, PKI & Identity Platforms.
 
 <p align="left">
+  <a href="https://vinodatwal.github.io/VinodAtwal/">
+    <img src="https://img.shields.io/badge/Website-0A84FF?style=for-the-badge&logo=safari&logoColor=white" alt="Website">
+  </a>
   <a href="https://www.linkedin.com/in/vinod-atwal/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
