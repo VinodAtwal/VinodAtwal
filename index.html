@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vinod Atwal · Senior Software Engineer</title>
   <meta name="description" content="Vinod Atwal — Senior Software Engineer specializing in software supply-chain security, PKI and identity platforms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -16,20 +19,22 @@
   </div>
 
   <main>
-    <header class="glass hero">
-      <img class="avatar" src="https://github.com/VinodAtwal.png" alt="Vinod Atwal" />
+    <header class="glass hero reveal">
+      <div class="avatar-wrap">
+        <img class="avatar" src="https://github.com/VinodAtwal.png" alt="Vinod Atwal" />
+      </div>
       <h1>Vinod Atwal</h1>
       <p class="role">Senior Software Engineer · 8+ years</p>
       <p class="focus">Software Supply-Chain Security · PKI · Identity Platforms · Distributed Systems</p>
       <p class="stack">Java · Go · Kubernetes · AWS</p>
       <nav class="cta">
-        <a class="btn" href="https://www.linkedin.com/in/vinod-atwal/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn primary" href="https://www.linkedin.com/in/vinod-atwal/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://vinodatwal.medium.com/" target="_blank" rel="noopener">Medium</a>
         <a class="btn" href="https://github.com/VinodAtwal" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </header>
 
-    <section class="glass">
+    <section class="glass reveal">
       <h2>About me</h2>
       <p>
         Senior Software Engineer with <strong>8+ years</strong> building distributed, secure backend systems —
@@ -39,37 +44,37 @@
       </p>
     </section>
 
-    <section class="glass">
+    <section class="glass reveal">
       <h2>Featured projects</h2>
       <div class="grid">
-        <article class="card">
-          <h3><a href="https://github.com/VinodAtwal/sievegate" target="_blank" rel="noopener">sievegate</a></h3>
+        <article class="card reveal">
           <span class="tag go">Go</span>
+          <h3><a href="https://github.com/VinodAtwal/sievegate" target="_blank" rel="noopener">sievegate</a></h3>
           <p>API contract testing that detects discrepancies between a spec and the live implementation and logs them for triage.</p>
         </article>
-        <article class="card">
-          <h3><a href="https://github.com/VinodAtwal/admission-controller-poc" target="_blank" rel="noopener">admission-controller-poc</a></h3>
+        <article class="card reveal">
           <span class="tag go">Go</span>
+          <h3><a href="https://github.com/VinodAtwal/admission-controller-poc" target="_blank" rel="noopener">admission-controller-poc</a></h3>
           <p>Kubernetes admission controller PoC for policy-gated, attestation-checked workloads.</p>
         </article>
-        <article class="card">
-          <h3><a href="https://github.com/VinodAtwal/embedded-infinispan" target="_blank" rel="noopener">embedded-infinispan</a></h3>
+        <article class="card reveal">
           <span class="tag java">Java</span>
+          <h3><a href="https://github.com/VinodAtwal/embedded-infinispan" target="_blank" rel="noopener">embedded-infinispan</a></h3>
           <p>Spring Boot with an embedded Infinispan distributed cache cluster.</p>
         </article>
-        <article class="card">
-          <h3><a href="https://github.com/VinodAtwal/maxscale-galera-k8s" target="_blank" rel="noopener">maxscale-galera-k8s</a></h3>
+        <article class="card reveal">
           <span class="tag shell">Shell</span>
+          <h3><a href="https://github.com/VinodAtwal/maxscale-galera-k8s" target="_blank" rel="noopener">maxscale-galera-k8s</a></h3>
           <p>MariaDB Galera multi-master cluster on Kubernetes, fronted by MaxScale routing.</p>
         </article>
-        <article class="card">
-          <h3><a href="https://github.com/VinodAtwal/BigCSVHandler" target="_blank" rel="noopener">BigCSVHandler</a></h3>
+        <article class="card reveal">
           <span class="tag data">Data</span>
+          <h3><a href="https://github.com/VinodAtwal/BigCSVHandler" target="_blank" rel="noopener">BigCSVHandler</a></h3>
           <p>Approaches for efficient reading and writing of very large files.</p>
         </article>
-        <article class="card">
-          <h3><a href="https://github.com/VinodAtwal/ObjectProxy" target="_blank" rel="noopener">ObjectProxy</a></h3>
+        <article class="card reveal">
           <span class="tag java">Java</span>
+          <h3><a href="https://github.com/VinodAtwal/ObjectProxy" target="_blank" rel="noopener">ObjectProxy</a></h3>
           <p>Runtime proxy creation via JDK dynamic proxies and cglib.</p>
         </article>
       </div>
@@ -78,7 +83,7 @@
       </div>
     </section>
 
-    <section class="glass">
+    <section class="glass reveal">
       <h2>Tech stack</h2>
       <p class="group">Languages</p>
       <div class="chips">
@@ -107,7 +112,7 @@
       </div>
     </section>
 
-    <section class="glass">
+    <section class="glass reveal">
       <h2>Latest from my blog</h2>
       <ul class="posts">
         <li>
@@ -131,9 +136,25 @@
       </ul>
     </section>
 
-    <footer>
+    <footer class="reveal">
       <p>© 2026 Vinod Atwal · Built on GitHub</p>
     </footer>
   </main>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transitionDelay = Math.min(i * 60, 300) + "ms";
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
