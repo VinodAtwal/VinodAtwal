@@ -6,13 +6,13 @@
   --accent-2: #5e5ce6;
   --pink: #ec4899;
   --mint: #06b6d4;
-  --glass: rgba(255, 255, 255, 0.62);
-  --glass-strong: rgba(255, 255, 255, 0.78);
+  --glass: rgba(255, 255, 255, 0.5);
+  --glass-strong: rgba(255, 255, 255, 0.66);
   --glass-border: rgba(255, 255, 255, 0.85);
   --glass-highlight: rgba(255, 255, 255, 0.95);
   --hairline: rgba(0, 0, 0, 0.08);
-  --card: rgba(255, 255, 255, 0.55);
-  --card-hover: rgba(255, 255, 255, 0.82);
+  --card: rgba(255, 255, 255, 0.42);
+  --card-hover: rgba(255, 255, 255, 0.72);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 12px 32px -12px rgba(0, 0, 0, 0.10), 0 32px 64px -32px rgba(0, 0, 0, 0.12);
   --radius: 24px;
   --radius-card: 18px;
@@ -27,12 +27,12 @@
   --accent-2: #5e5ce6;
   --pink: #ff6fb0;
   --mint: #22d3ee;
-  --glass: rgba(28, 28, 30, 0.55);
-  --glass-strong: rgba(28, 28, 30, 0.8);
+  --glass: rgba(28, 28, 30, 0.45);
+  --glass-strong: rgba(28, 28, 30, 0.7);
   --glass-border: rgba(255, 255, 255, 0.09);
   --glass-highlight: rgba(255, 255, 255, 0.16);
   --hairline: rgba(255, 255, 255, 0.1);
-  --card: rgba(255, 255, 255, 0.045);
+  --card: rgba(255, 255, 255, 0.035);
   --card-hover: rgba(255, 255, 255, 0.09);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 16px 40px -16px rgba(0, 0, 0, 0.6);
 }
@@ -46,12 +46,12 @@
     --accent-2: #5e5ce6;
     --pink: #ff6fb0;
     --mint: #22d3ee;
-    --glass: rgba(28, 28, 30, 0.55);
-    --glass-strong: rgba(28, 28, 30, 0.8);
+    --glass: rgba(28, 28, 30, 0.45);
+    --glass-strong: rgba(28, 28, 30, 0.7);
     --glass-border: rgba(255, 255, 255, 0.09);
     --glass-highlight: rgba(255, 255, 255, 0.16);
     --hairline: rgba(255, 255, 255, 0.1);
-    --card: rgba(255, 255, 255, 0.045);
+    --card: rgba(255, 255, 255, 0.035);
     --card-hover: rgba(255, 255, 255, 0.09);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 16px 40px -16px rgba(0, 0, 0, 0.6);
   }
@@ -181,7 +181,7 @@ main {
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.38;
+  opacity: 0.46;
   animation: float 26s ease-in-out infinite;
 }
 
@@ -240,8 +240,8 @@ main {
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
   padding: 40px;
   position: relative;
   overflow: hidden;
