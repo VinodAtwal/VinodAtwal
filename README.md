@@ -69,6 +69,10 @@
   </tr>
 </table>
 
+<p align="center">
+  <a href="https://github.com/VinodAtwal?tab=repositories">Show all repositories →</a>
+</p>
+
 <br>
 
 <h2 align="center">Tech stack</h2>
