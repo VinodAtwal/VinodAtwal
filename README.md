@@ -11,7 +11,7 @@
 
 Senior Software Engineer with **7+ years** building distributed, secure backend systems — specializing in **software supply-chain security** (SLSA L3 compliance, SBOM/VEX, code signing, PKI) and **identity platforms** (OAuth2/OIDC, passkeys/WebAuthn) serving **100K+ users**. Hands-on with **Java, Go, Kubernetes and AWS**.
 
-Currently at **DigiCert**, where I architected the Secure Release Manager — a supply-chain security platform productized for enterprise customers — and design systems end-to-end, from greenfield design through production rollout. I write deep-dive engineering articles on Medium about distributed systems, security, and databases.
+I architected the Secure Release Manager — a supply-chain security platform productized for enterprise customers — and design systems end-to-end, from greenfield design through production rollout. I write deep-dive engineering articles on Medium about distributed systems, security, and databases.
 
 ---
 
