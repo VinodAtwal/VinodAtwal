@@ -275,8 +275,9 @@ h1 {
 
 .btn:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(34, 211, 238, 0.8);
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.4), 0 12px 26px -14px rgba(34, 211, 238, 0.45);
 }
 
 .btn.primary {
@@ -288,7 +289,7 @@ h1 {
 
 .btn.primary:hover {
   background: linear-gradient(120deg, var(--violet), var(--cyan));
-  box-shadow: 0 16px 34px -12px rgba(167, 139, 250, 0.65);
+  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.45), 0 16px 34px -12px rgba(167, 139, 250, 0.65);
 }
 
 h2 {
