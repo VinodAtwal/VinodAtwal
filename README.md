@@ -79,10 +79,6 @@ I architected the Secure Release Manager — a supply-chain security platform pr
 <p align="center">
   <img src="./profile/stats.svg" alt="GitHub stats">
   <img src="./profile/top-langs.svg" alt="Top languages">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=VinodAtwal&theme=transparent&ring=22d3ee&fire=a78bfa&currStreakNum=e6edff&sideNums=e6edff&currStreakLabel=94a3b8&sideLabels=64748b&dates=64748b&hide_border=true">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=VinodAtwal&theme=transparent&ring=0e7490&fire=7c3aed&currStreakNum=334155&sideNums=334155&currStreakLabel=64748b&sideLabels=94a3b8&dates=94a3b8&hide_border=true" alt="GitHub streak">
-  </picture>
 </p>
 
 ---
