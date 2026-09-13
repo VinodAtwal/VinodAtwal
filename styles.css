@@ -325,7 +325,8 @@ strong {
 
 .center {
   text-align: center;
-  margin-top: 26px;
+  margin-top: 32px;
+  margin-bottom: 4px;
 }
 
 .card {
@@ -396,6 +397,7 @@ strong {
 .tag.java { background: rgba(237, 139, 0, 0.14); color: #f2a33c; border-color: rgba(237, 139, 0, 0.3); }
 .tag.shell { background: rgba(127, 141, 187, 0.16); color: #a9b6dd; border-color: rgba(127, 141, 187, 0.35); }
 .tag.data { background: rgba(52, 211, 153, 0.14); color: #4fdba7; border-color: rgba(52, 211, 153, 0.3); }
+.tag.med { background: rgba(244, 114, 182, 0.14); color: #f4a6cc; border-color: rgba(244, 114, 182, 0.35); }
 
 .group {
   font-size: 0.75rem;
@@ -436,47 +438,6 @@ strong {
   border-color: rgba(34, 211, 238, 0.4);
   background: rgba(34, 211, 238, 0.08);
   color: var(--cyan);
-}
-
-.posts {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.posts li {
-  padding-left: 18px;
-  position: relative;
-}
-
-.posts li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: linear-gradient(var(--cyan), var(--violet));
-  box-shadow: 0 0 10px rgba(34, 211, 238, 0.7);
-}
-
-.posts a {
-  color: var(--text);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-
-.posts a:hover {
-  color: var(--cyan);
-}
-
-.posts span {
-  display: block;
-  color: var(--muted);
-  font-size: 0.88rem;
 }
 
 footer {
