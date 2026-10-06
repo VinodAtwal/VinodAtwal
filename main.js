@@ -512,6 +512,7 @@
 
     projects: function () {
       var repos = [
+        ["strata-ctx", "context firewall for coding agents — deterministic compression, governance pinning"],
         ["sievegate", "API contract testing that diffs a spec against the live implementation"],
         ["admission-controller-poc", "policy-gated, attestation-checked Kubernetes workloads"],
         ["embedded-infinispan", "Spring Boot with an embedded Infinispan cache cluster"],
