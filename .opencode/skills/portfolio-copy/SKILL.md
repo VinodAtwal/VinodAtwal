@@ -66,8 +66,10 @@ generation, and don't drop the middle steps:
 - Keep sections parallel: every panel has an `<h2>` and a one-line
   `.panel-intro`. One idea per sentence; drop adjectives before dropping facts.
 - British/partial spelling already in text (`productised`) is fine — match it.
-- When copy appears in both index.html and main.js (about, experience, stack),
-  update **both** so the terminal and the page never disagree.
+- Page sections (about, experience, projects, stack, writing) live only in
+  `index.html` — the terminal renders them from the DOM, so edit the HTML and
+  the terminal follows automatically. Only terminal-specific strings (whoami,
+  neofetch, contact, the experience detail map) live in `main.js`.
 - Meta descriptions are shortened versions of the lede — rewrite the lede,
   then sync `<meta name="description">`, `og:description`, `twitter:description`
   and the JSON-LD `description`.

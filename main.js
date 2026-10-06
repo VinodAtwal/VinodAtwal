@@ -308,7 +308,7 @@
     if (!note) return;
 
     if (ghState.error && !source) {
-      note.textContent = "Live numbers are unavailable right now — GitHub's API is rate-limiting anonymous requests. The cards below are from the nightly workflow.";
+      note.textContent = "Live numbers are unavailable right now — GitHub's API is rate-limiting anonymous requests. Try again in a little while.";
     } else if (source === "cache") {
       note.textContent = "Showing cached numbers from an earlier visit.";
     } else {
@@ -441,6 +441,80 @@
     return '<a class="tlink" href="#' + esc(id) + '" data-goto="' + esc(id) + '">' + esc(label) + "</a>";
   }
 
+  /* ---- page content ----
+     index.html is the single source of truth. The commands below render
+     about / experience / projects / stack / writing straight from the DOM,
+     so the terminal and the page can never drift apart. */
+
+  function selectAll(sel, root) {
+    return Array.prototype.slice.call((root || document).querySelectorAll(sel));
+  }
+
+  function textOf(el) {
+    return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
+  }
+
+  var PAGE = {
+
+    about: function () {
+      return selectAll("#about .prose p").map(function (p) { return "<p>" + p.innerHTML + "</p>"; });
+    },
+
+    experience: function () {
+      /* Terminal-only detail lines; headings and dates come from the page. */
+      var details = {
+        "DigiCert": "Secure Release Manager — SBOM, CBOM and SLSA attestation generation, " +
+          "SAST/SARIF/VEX, PQC management. −40% batch processing time.",
+        "Blackhawk Network": "Enterprise IAM from scratch for 100K+ users. OIDC, passkeys, " +
+          "PII-isolated person model. APISIX gateway, −40% API latency, −30% cost.",
+        "Infosys Limited": "GST Network full-stack for 50M+ registered users. Redis licence-key " +
+          "and token auth, 50K+ monthly PDF compliance reports."
+      };
+
+      return selectAll("#experience .timeline .role").map(function (role) {
+        var org = textOf(role.querySelector(".org"));
+        var times = selectAll("time", role);
+        if (!org || !times.length) return "";
+        var yearOf = function (t) { return (t.getAttribute("datetime") || "").slice(0, 4); };
+        var span = yearOf(times[0]) + " — " + (times.length > 1 ? yearOf(times[1]) : "present");
+        var detail = details[org] || "";
+        return "<li><b>" + esc(span + " · " + org) + "</b>" +
+          (detail ? "<span>" + esc(detail) + "</span>" : "") + "</li>";
+      }).filter(Boolean).join("");
+    },
+
+    projects: function () {
+      return selectAll("#work .grid .card").map(function (card) {
+        var a = card.querySelector("h3 a");
+        if (!a) return "";
+        var desc = selectAll("p", card).filter(function (p) {
+          return !p.classList.contains("card-top");
+        })[0];
+        return '<li><a class="tlink" href="' + esc(a.getAttribute("href")) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          esc(textOf(a).replace(/\s*↗\s*$/, "")) + "</a><span>" +
+          esc(textOf(desc)) + "</span></li>";
+      }).filter(Boolean).join("");
+    },
+
+    stack: function () {
+      return selectAll("#stack .stack-col").map(function (col) {
+        var tags = selectAll(".tags li", col).map(textOf).join(" · ");
+        return '<div><p class="tgroup">' + esc(textOf(col.querySelector(".group"))) +
+          "</p><p>" + esc(tags) + "</p></div>";
+      }).filter(Boolean).join("");
+    },
+
+    writing: function () {
+      return selectAll("#writing .posts li a").map(function (a) {
+        return '<li><a class="tlink" href="' + esc(a.getAttribute("href")) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          esc(textOf(a.querySelector(".post-title"))) + '</a> <span class="tdate">' +
+          esc(textOf(a.querySelector("time"))) + "</span></li>";
+      }).filter(Boolean).join("");
+    }
+  };
+
   /* ---- command implementations ---- */
 
   var COMMANDS = {
@@ -481,85 +555,45 @@
     },
 
     about: function () {
-      return [
-        "<p>I build distributed backend systems where correctness and trust are the whole point — the Secure SDLC " +
-        "tooling behind release pipelines that can't ship unsigned code, identity platforms that hold at 100K+ " +
-        "users, and signing services that stay fast under load.</p>",
-        "<p>At DigiCert I develop a secure release manager, productised for premium enterprise customers — " +
-        "tooling that generates SBOMs, CBOMs and SLSA attestations end to end, SAST scanning and " +
-        "vulnerability detection with SARIF reports, VEX generation, and PQC, vulnerability management with policy-based " +
-        "decisions — all backed by in-house PKI and signed attestations.</p>",
-        "<p>I also build AI developer tooling — a project memory store pairing pgvector semantic search with " +
-        "Tree-sitter AST parsing for method-level code resolution, and an agentic Jira-to-implementation " +
-        "pipeline where every generated change is gated by its test suite before review.</p>",
-        '<p class="tmore">' + sectionLink("about", "read the long version →") + "</p>"
-      ].join("");
+      var paras = PAGE.about();
+      if (!paras.length) return '<p class="terr">about section unavailable.</p>';
+      return paras.join("") +
+        '<p class="tmore">' + sectionLink("about", "read the long version →") + "</p>";
     },
 
     experience: function () {
+      var items = PAGE.experience();
+      if (!items) return '<p class="terr">experience section unavailable.</p>';
       return [
-        '<ol class="ttimeline">',
-        "<li><b>2024 — present · DigiCert</b><span>Secure Release Manager — SBOM, CBOM and SLSA " +
-        "attestation generation, SAST/SARIF/VEX, PQC management. −40% batch processing time.</span></li>",
-        "<li><b>2021 — 2024 · Blackhawk Network</b><span>Enterprise IAM from scratch for 100K+ users. " +
-        "OIDC, passkeys, PII-isolated person model. APISIX gateway, −40% API latency, −30% cost.</span></li>",
-        "<li><b>2019 — 2021 · Infosys</b><span>GST Network full-stack for 50M+ registered users. " +
-        "Redis licence-key and token auth, 50K+ monthly PDF compliance reports.</span></li>",
-        "</ol>",
+        '<ol class="ttimeline">' + items + "</ol>",
         '<p class="tmore">' + sectionLink("experience", "full timeline →") + "</p>"
       ].join("");
     },
 
     projects: function () {
-      var repos = [
-        ["strata-ctx", "context firewall for coding agents — deterministic compression, governance pinning"],
-        ["sievegate", "API contract testing that diffs a spec against the live implementation"],
-        ["admission-controller-poc", "policy-gated, attestation-checked Kubernetes workloads"],
-        ["embedded-infinispan", "Spring Boot with an embedded Infinispan cache cluster"],
-        ["maxscale-galera-k8s", "MariaDB Galera multi-master on Kubernetes behind MaxScale"],
-        ["BigCSVHandler", "streaming reads and writes for very large files"],
-        ["ObjectProxy", "JDK dynamic proxies and cglib, tradeoffs compared"]
-      ];
-      var items = repos.map(function (r) {
-        return '<li><a class="tlink" href="https://github.com/VinodAtwal/' + esc(r[0]) +
-          '" target="_blank" rel="noopener noreferrer">' + esc(r[0]) + "</a><span>" + esc(r[1]) + "</span></li>";
-      });
+      var items = PAGE.projects();
+      if (!items) return '<p class="terr">projects section unavailable.</p>';
       return [
-        '<ul class="trepos">' + items.join("") + "</ul>",
+        '<ul class="trepos">' + items + "</ul>",
         '<p class="tmore">' + link("https://github.com/VinodAtwal?tab=repositories", "all repositories →") + "</p>"
       ].join("");
     },
 
     stack: function () {
+      var groups = PAGE.stack();
+      if (!groups) return '<p class="terr">stack section unavailable.</p>';
       return [
-        '<div class="tstack">',
-        "<div><p class=\"tgroup\">languages</p><p>Java · Go · Python · SQL · Bash · Lua</p></div>",
-        "<div><p class=\"tgroup\">supply chain</p><p>SBOM/CBOM/SLSA attestation gen · SAST · SARIF · VEX · PQC · code signing · PKI</p></div>",
-        "<div><p class=\"tgroup\">identity</p><p>OAuth2/OIDC · WebAuthn/FIDO2 · Keycloak · Okta · policy authz</p></div>",
-        "<div><p class=\"tgroup\">platform</p><p>AWS (EKS, ECS, Lambda, KMS) · Kubernetes · Docker · GitHub Actions</p></div>",
-        "<div><p class=\"tgroup\">data</p><p>PostgreSQL · pgvector · MySQL · MongoDB · Elasticsearch · Redis</p></div>",
-        "<div><p class=\"tgroup\">ai engineering</p><p>agent workflows · RAG · vector search · Tree-sitter · token optimisation</p></div>",
-        "</div>",
+        '<div class="tstack">' + groups + "</div>",
         '<p class="tmore">' + sectionLink("stack", "full stack →") + "</p>"
       ].join("");
     },
 
     writing: function () {
-      var posts = [
-        ["Sep 2026", "How Three MariaDB Servers Behave Like One", "how-three-mariadb-servers-behave-like-one-the-truth-about-galera-and-maxscale-5671d0e5d990"],
-        ["Jul 2026", "Kubernetes Admission Controllers, Explained", "kubernetes-admission-controllers-explained-what-they-are-and-how-they-actually-work-7e23ef4b5d82"],
-        ["Jun 2026", "I Went Down a Rabbit Hole on Merkle Trees in Dynamo and Cassandra", "i-went-down-a-rabbit-hole-on-merkle-trees-in-dynamo-and-cassandra-heres-what-i-found-9113b133e016"],
-        ["May 2026", "Layers All the Way Down: What's Actually Happening When You Run a Container", "layers-all-the-way-down-whats-actually-happening-when-you-run-a-container-52406a5ac46d"],
-        ["May 2026", "Sockets Are Not Magic — They're Just Pipes With Fancy Names", "sockets-are-not-magic-theyre-just-pipes-with-fancy-names-6cd2e179925e"]
-      ];
-      var items = posts.map(function (p) {
-        return '<li><a class="tlink" href="https://medium.com/@vinodatwal/' + esc(p[2]) +
-          '" target="_blank" rel="noopener noreferrer">' + esc(p[1]) +
-          '</a> <span class="tdate">' + esc(p[0]) + "</span></li>";
-      });
+      var items = PAGE.writing();
+      if (!items) return '<p class="terr">writing section unavailable.</p>';
       return [
-        '<p class="tintro">' + posts.length + " articles, newest first (more on medium):</p>",
-        '<ul class="tlist">' + items.join("") + "</ul>",
+        '<p class="tintro">articles, newest first (more on medium):</p>',
+        '<ul class="tlist">' + items + "</ul>",
         '<p class="tmore">' + link("https://medium.com/@vinodatwal", "more on medium →") + "</p>"
       ].join("");
     },
@@ -711,7 +745,7 @@
   var ALIASES = {
     "hi": "help", "hello": "help", "?": "help", "man": "help",
     bio: "about", profile: "whoami", cv: "resume",
-    exp: "experience", jobs: "experience", work_History: "experience",
+    exp: "experience", jobs: "experience", work_history: "experience",
     work: "projects", repos: "projects", repo: "projects",
     skills: "stack", tools: "stack", tech: "stack",
     blog: "writing", posts: "writing", articles: "writing",
