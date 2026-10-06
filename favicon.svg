@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Vinod Atwal">
+  <rect width="64" height="64" rx="12" fill="#05070a"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="11.25" fill="none" stroke="#00e08a" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M16 22l10 10-10 10" fill="none" stroke="#00e08a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 42h16" fill="none" stroke="#e9eef3" stroke-width="4.5" stroke-linecap="round"/>
+</svg>

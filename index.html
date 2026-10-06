@@ -1,182 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vinod Atwal · Senior Software Engineer</title>
-  <meta name="description" content="Vinod Atwal — Senior Software Engineer specializing in software supply-chain security, PKI and identity platforms." />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="stylesheet" href="./styles.css" />
-  <script>
-    (function () {
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Vinod Atwal · Senior Software Engineer — Supply-Chain Security, PKI &amp; Identity</title>
+<meta name="description" content="Vinod Atwal — Senior Software Engineer with around 8 years building distributed backend systems, developing Secure SDLC tooling: end-to-end SBOM, CBOM and SLSA attestation generation, code signing and provenance, SAST scanning, SARIF reports, VEX generation and PQC, vulnerability management, plus enterprise IAM for 100K+ users. Java, Go, Kubernetes, AWS." />
+<meta name="author" content="Vinod Atwal" />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#05070a" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f4f5f2" media="(prefers-color-scheme: light)" />
+
+<link rel="canonical" href="https://vinodatwal.github.io/VinodAtwal/" />
+
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Vinod Atwal" />
+<meta property="og:title" content="Vinod Atwal · Senior Software Engineer" />
+<meta property="og:description" content="Developing Secure SDLC tooling: end-to-end SBOM, CBOM and SLSA attestation generation, code signing and provenance, SAST scanning, SARIF reports, VEX generation and PQC, vulnerability management, plus PKI, identity platforms and enterprise IAM for 100K+ users." />
+<meta property="og:url" content="https://vinodatwal.github.io/VinodAtwal/" />
+<meta property="og:image" content="https://vinodatwal.github.io/VinodAtwal/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Vinod Atwal — Senior Software Engineer, software supply-chain security, PKI and identity platforms" />
+<meta property="profile:first_name" content="Vinod" />
+<meta property="profile:last_name" content="Atwal" />
+<meta property="profile:username" content="VinodAtwal" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vinod Atwal · Senior Software Engineer" />
+<meta name="twitter:description" content="Secure SDLC tooling. SBOM / CBOM / SLSA attestation generation, signing and provenance, SAST / SARIF / VEX / PQC, IAM at 100K+ users, Java / Go / Kubernetes / AWS." />
+<meta name="twitter:image" content="https://vinodatwal.github.io/VinodAtwal/og.png" />
+
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./favicon.svg" />
+<link rel="manifest" href="./site.webmanifest" />
+<link rel="stylesheet" href="./styles.css" />
+<link rel="alternate" type="application/rss+xml" title="Vinod Atwal on Medium" href="https://medium.com/feed/@vinodatwal" />
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    try {
       var stored = localStorage.getItem("theme");
       var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-    })();
-  </script>
+      root.setAttribute("data-theme", theme);
+    } catch (e) {
+      root.setAttribute("data-theme", "dark");
+    }
+    root.classList.add("js");
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vinod Atwal",
+  "url": "https://vinodatwal.github.io/VinodAtwal/",
+  "image": "https://github.com/VinodAtwal.png",
+  "jobTitle": "Senior Software Engineer",
+  "description": "Senior Software Engineer with around 8 years building distributed, secure backend systems, developing Secure SDLC tooling, PKI and identity platforms.",
+  "email": "mailto:vinodatwal27@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bengaluru",
+    "addressCountry": "IN"
+  },
+  "worksFor": { "@type": "Organization", "name": "DigiCert" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Guru Gobind Singh Indraprastha University" },
+  "knowsAbout": [
+    "Secure SDLC Tooling",
+    "Software Supply Chain Security",
+    "SLSA",
+    "SBOM",
+    "CBOM",
+    "VEX",
+    "Build Provenance and Attestations",
+    "Code Signing",
+    "Public Key Infrastructure",
+    "OAuth2",
+    "OpenID Connect",
+    "WebAuthn",
+    "Kubernetes",
+    "AWS",
+    "Distributed Systems",
+    "Java",
+    "Go"
+  ],
+  "sameAs": [
+    "https://github.com/VinodAtwal",
+    "https://www.linkedin.com/in/vinod-atwal/",
+    "https://medium.com/@vinodatwal/"
+  ]
+}
+</script>
 </head>
+
 <body>
-  <button id="themeToggle" class="theme-toggle" aria-label="Toggle light and dark theme">
-    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-    </svg>
-    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
-    </svg>
-  </button>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<div class="grid-overlay" aria-hidden="true"></div>
 
-  <div class="blobs" aria-hidden="true">
-    <span class="blob b1"></span>
-    <span class="blob b2"></span>
-    <span class="blob b3"></span>
-    <span class="blob b4"></span>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-prompt" aria-hidden="true">~/</span><span class="brand-name">vinod.atwal</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Section navigation">
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navList">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="nav-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+      <ul class="nav-list" id="navList">
+        <li><a href="#about"><span class="tick" aria-hidden="true">01</span>about</a></li>
+        <li><a href="#experience"><span class="tick" aria-hidden="true">02</span>experience</a></li>
+        <li><a href="#work"><span class="tick" aria-hidden="true">03</span>work</a></li>
+        <li><a href="#stack"><span class="tick" aria-hidden="true">04</span>stack</a></li>
+        <li><a href="#writing"><span class="tick" aria-hidden="true">05</span>writing</a></li>
+        <li><a href="#contact"><span class="tick" aria-hidden="true">06</span>contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="topbar-actions">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 2 0 0 0 9.8 9.8z"></path>
+        </svg>
+      </button>
+    </div>
   </div>
+</header>
 
-  <main>
-    <header class="glass hero reveal">
-      <div class="avatar-wrap">
-        <img class="avatar" src="https://github.com/VinodAtwal.png" alt="Vinod Atwal" />
-      </div>
-      <h1>Vinod Atwal</h1>
-      <p class="role">Senior Software Engineer · 8+ years</p>
-      <p class="focus">Software Supply-Chain Security · PKI · Identity Platforms · Distributed Systems</p>
-      <p class="stack">Java · Go · Kubernetes · AWS</p>
-      <nav class="cta">
-        <a class="btn primary" href="https://www.linkedin.com/in/vinod-atwal/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://vinodatwal.medium.com/" target="_blank" rel="noopener">Medium</a>
-        <a class="btn" href="https://github.com/VinodAtwal" target="_blank" rel="noopener">GitHub</a>
-      </nav>
-    </header>
+<main id="main">
 
-    <section class="glass reveal">
-      <h2>About me</h2>
-      <p>
-        Senior Software Engineer with <strong>8+ years</strong> building distributed, secure backend systems —
-        specializing in <strong>software supply-chain security</strong> (SLSA L3, SBOM/VEX, code signing, PKI) and
-        <strong>identity platforms</strong> (OAuth2/OIDC, passkeys/WebAuthn) serving <strong>100K+ users</strong>.
-        Hands-on with <strong>Java, Go, Kubernetes and AWS</strong>.
-      </p>
-    </section>
+  <section class="hero" id="top">
 
-    <section class="glass reveal">
-      <h2>Featured projects</h2>
-      <div class="grid">
-        <article class="card">
-          <span class="tag go">Go</span>
-          <h3><a href="https://github.com/VinodAtwal/sievegate" target="_blank" rel="noopener">sievegate</a></h3>
-          <p>API contract testing that detects discrepancies between a spec and the live implementation and logs them for triage.</p>
-        </article>
-        <article class="card">
-          <span class="tag go">Go</span>
-          <h3><a href="https://github.com/VinodAtwal/admission-controller-poc" target="_blank" rel="noopener">admission-controller-poc</a></h3>
-          <p>Kubernetes admission controller PoC for policy-gated, attestation-checked workloads.</p>
-        </article>
-        <article class="card">
-          <span class="tag java">Java</span>
-          <h3><a href="https://github.com/VinodAtwal/embedded-infinispan" target="_blank" rel="noopener">embedded-infinispan</a></h3>
-          <p>Spring Boot with an embedded Infinispan distributed cache cluster.</p>
-        </article>
-        <article class="card">
-          <span class="tag shell">Shell</span>
-          <h3><a href="https://github.com/VinodAtwal/maxscale-galera-k8s" target="_blank" rel="noopener">maxscale-galera-k8s</a></h3>
-          <p>MariaDB Galera multi-master cluster on Kubernetes, fronted by MaxScale routing.</p>
-        </article>
-        <article class="card">
-          <span class="tag data">Data</span>
-          <h3><a href="https://github.com/VinodAtwal/BigCSVHandler" target="_blank" rel="noopener">BigCSVHandler</a></h3>
-          <p>Approaches for efficient reading and writing of very large files.</p>
-        </article>
-        <article class="card">
-          <span class="tag java">Java</span>
-          <h3><a href="https://github.com/VinodAtwal/ObjectProxy" target="_blank" rel="noopener">ObjectProxy</a></h3>
-          <p>Runtime proxy creation via JDK dynamic proxies and cglib.</p>
-        </article>
-      </div>
-      <div class="center">
-        <a class="btn" href="https://github.com/VinodAtwal?tab=repositories" target="_blank" rel="noopener">Show all repositories →</a>
-      </div>
-    </section>
+    <p class="badge">
+      <span class="pulse" aria-hidden="true"></span>
+      Open to collaboration &amp; discussion
+    </p>
 
-    <section class="glass reveal">
-      <h2>Tech stack</h2>
-      <p class="group">Languages</p>
-      <div class="chips">
-        <span class="chip">Java</span>
-        <span class="chip">Go</span>
-        <span class="chip">Python</span>
-        <span class="chip">SQL</span>
-        <span class="chip">Bash</span>
-      </div>
-      <p class="group">Backend &amp; data</p>
-      <div class="chips">
-        <span class="chip">Spring Boot</span>
-        <span class="chip">PostgreSQL</span>
-        <span class="chip">Redis</span>
-        <span class="chip">Apache Kafka</span>
-        <span class="chip">MongoDB</span>
-      </div>
-      <p class="group">Security, cloud &amp; identity</p>
-      <div class="chips">
-        <span class="chip accent">SLSA L3</span>
-        <span class="chip accent">SBOM / VEX</span>
-        <span class="chip accent">PKI &amp; Code Signing</span>
-        <span class="chip accent">OAuth2 / OIDC</span>
-        <span class="chip">AWS</span>
-        <span class="chip">Kubernetes</span>
-      </div>
-    </section>
+    <h1>
+      <span class="line"><span class="prompt" aria-hidden="true">&gt;</span> Hi, I'm Vinod Atwal.</span>
+      <span class="line sub">I build digital trust — secure SDLC, PKI and IAM.</span>
+    </h1>
 
-    <section class="glass reveal">
-      <h2>Latest from my blog</h2>
-      <div class="grid">
-        <article class="card">
-          <span class="tag med">Medium</span>
-          <h3><a href="https://vinodatwal.medium.com/how-three-mariadb-servers-behave-like-one-the-truth-about-galera-and-maxscale-5671d0e5d990" target="_blank" rel="noopener">How Three MariaDB Servers Behave Like One</a></h3>
-          <p>Synchronous multi-master replication, quorum math, and MaxScale routing — verified by running the stack.</p>
-        </article>
-        <article class="card">
-          <span class="tag med">Medium</span>
-          <h3><a href="https://vinodatwal.medium.com/kubernetes-admission-controllers-explained-what-they-are-and-how-they-actually-work-7e23ef4b5d82" target="_blank" rel="noopener">Kubernetes Admission Controllers, Explained</a></h3>
-          <p>What they are and how they actually work.</p>
-        </article>
-        <article class="card">
-          <span class="tag med">Medium</span>
-          <h3><a href="https://vinodatwal.medium.com/i-went-down-a-rabbit-hole-on-merkle-trees-in-dynamo-and-cassandra-heres-what-i-found-9113b133e016" target="_blank" rel="noopener">A Deep Dive Into Merkle Trees in Dynamo and Cassandra</a></h3>
-          <p>How Merkle trees make anti-entropy reconciliation work.</p>
-        </article>
+    <p class="lede">
+      Senior Software Engineer in Bengaluru with <strong>around 8 years</strong> on distributed backend systems.
+      Most recently I'm developing the tooling that makes a <strong>Secure SDLC</strong> possible:
+      end-to-end <strong>SBOM</strong>, <strong>CBOM</strong> and <strong>SLSA</strong> attestation generation, code signing
+      and provenance, SAST scanning and vulnerability detection, <strong>SARIF</strong> reports, <strong>VEX</strong>
+      generation, and PQC, vulnerability management with policy-based decisions. I also build an enterprise
+      <strong>IAM</strong> stack serving 100K+ users and high-throughput signing infrastructure. Java and Go on AWS and Kubernetes.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="mailto:vinodatwal27@gmail.com?subject=Hello%20Vinod">
+        <span aria-hidden="true">$</span> get in touch
+      </a>
+      <a class="btn" href="mailto:vinodatwal27@gmail.com?subject=R%C3%A9sum%C3%A9%20request">contact me for full résumé</a>
+      <a class="btn" href="https://github.com/VinodAtwal" target="_blank" rel="noopener noreferrer">github ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/vinod-atwal/" target="_blank" rel="noopener noreferrer">linkedin ↗</a>
+    </div>
+
+    <ul class="metrics" id="metrics">
+      <li><b data-count="7" data-suffix="+">0</b><span>years shipping</span></li>
+      <li><b>SBOM&nbsp;+&nbsp;CBOM</b><span>generated end to end</span></li>
+      <li><b data-count="100" data-suffix="K+">0</b><span>IAM identities</span></li>
+      <li><b data-count="50" data-suffix="M+">0</b><span>end users served</span></li>
+    </ul>
+
+    <div class="term window" id="terminal" role="group" aria-labelledby="termTitle">
+      <div class="term-bar">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="term-title" id="termTitle">vinod@secure-release: ~</span>
+        <span class="term-clock mono" id="termClock" aria-hidden="true"></span>
+        <button class="term-replay" id="replay" type="button">
+          <span aria-hidden="true">↻</span> rerun trace
+        </button>
       </div>
-      <div class="center">
-        <a class="btn" href="https://vinodatwal.medium.com/" target="_blank" rel="noopener">More on Medium →</a>
+
+      <div class="term-body">
+        <div class="log" id="termLog" aria-hidden="true">
+          <p class="term-cmd"><span class="prompt">$</span> sr trace <span class="flag">--pipeline</span> release <span class="flag">--policy</span> slsa-l3</p>
+
+          <ol class="pipeline">
+            <li class="stage" style="--i:0">
+              <span class="stage-name">fetch</span>
+              <span class="stage-detail">github.com/VinodAtwal/sievegate @ <code>a3f9c21</code></span>
+              <span class="verdict ok">verified</span>
+            </li>
+            <li class="stage" style="--i:1">
+              <span class="stage-name">build</span>
+              <span class="stage-detail">hermetic container · sbom spdx-2.3 · 118 pkgs</span>
+              <span class="verdict ok">verified</span>
+            </li>
+            <li class="stage" style="--i:2">
+              <span class="stage-name">sign</span>
+              <span class="stage-detail">keyless cosign · chain to internal PKI root</span>
+              <span class="verdict ok">verified</span>
+            </li>
+            <li class="stage" style="--i:3">
+              <span class="stage-name">attest</span>
+              <span class="stage-detail">in-toto provenance · policy engine</span>
+              <span class="verdict ok">verified</span>
+            </li>
+            <li class="stage" style="--i:4">
+              <span class="stage-name">admit</span>
+              <span class="stage-detail">signature + provenance gate · no vuln above threshold</span>
+              <span class="verdict allow">allowed</span>
+            </li>
+          </ol>
+
+          <p class="term-out">
+            <span class="prompt">&gt;</span> SLSA Level 3 satisfied — 0 policy violations
+          </p>
+          <p class="term-note">Illustrative trace of the secure release workflow I designed and built at DigiCert.</p>
+        </div>
+
+        <form class="prompt-line" id="termForm" hidden autocomplete="off">
+          <label class="sr-only" for="termInput">Type a command. Try &quot;help&quot;.</label>
+          <span class="prompt" aria-hidden="true">$</span>
+          <input id="termInput" name="cmd" type="text" spellcheck="false" autocapitalize="off"
+                 autocorrect="off" enterkeyhint="go" aria-describedby="termHint" />
+          <button type="submit" class="term-go">run</button>
+        </form>
+        <p class="sr-only" id="termHint">Press the up and down arrow keys for previous commands, Tab to autocomplete. Type help and press Enter to see everything this terminal understands.</p>
       </div>
-    </section>
+    </div>
 
-    <footer class="reveal">
-      <p>© 2026 Vinod Atwal · Built on GitHub</p>
-    </footer>
-  </main>
+    <ul class="term-suggest" id="termSuggest" hidden>
+      <li><button type="button" data-cmd="help">help</button></li>
+      <li><button type="button" data-cmd="about">about</button></li>
+      <li><button type="button" data-cmd="experience">experience</button></li>
+      <li><button type="button" data-cmd="work">work</button></li>
+      <li><button type="button" data-cmd="stack">stack</button></li>
+      <li><button type="button" data-cmd="github">github</button></li>
+      <li><button type="button" data-cmd="writing">writing</button></li>
+      <li><button type="button" data-cmd="contact">contact</button></li>
+      <li><button type="button" data-cmd="neofetch">neofetch</button></li>
+    </ul>
 
-  <script>
-    const toggle = document.getElementById("themeToggle");
-    toggle.addEventListener("click", () => {
-      const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-    });
+    <p class="scroll-hint" aria-hidden="true"><span>scroll</span></p>
+  </section>
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, i) => {
-          if (entry.isIntersecting) {
-            entry.target.style.transitionDelay = Math.min(i * 60, 300) + "ms";
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-  </script>
+  <section class="panel" id="about" aria-labelledby="about-h">
+    <h2 id="about-h"><span class="hash" aria-hidden="true">##</span> about</h2>
+    <div class="about-grid">
+      <div class="prose">
+        <p>
+          I build distributed backend systems where correctness and trust are the whole point. That means Secure SDLC
+          tooling behind release pipelines that can't ship unsigned code, identity platforms that hold up at
+          100K+ users, and signing services that stay fast under load.
+        </p>
+        <p>
+          At <strong>DigiCert</strong> I develop a secure release manager, productised for premium enterprise
+          customers — tooling that generates SBOMs, CBOMs and SLSA attestations end to end, SAST scanning and
+          vulnerability detection with SARIF reports, VEX generation, and PQC, vulnerability management with policy-based
+          decisions — all backed by in-house PKI and signed attestations. Before that, at
+          <strong>Blackhawk Network</strong>, I built an enterprise IAM platform from scratch with OpenID Connect,
+          passkeys, and fine-grained policy authorization. At <strong>Infosys</strong> I worked on tax-platform
+          infrastructure serving 50M+ registered users.
+        </p>
+        <p>
+          I also build AI developer tooling — a project memory store pairing pgvector semantic search with
+          Tree-sitter AST parsing for method-level code resolution, which cut token consumption on LLM workflows,
+          and an agentic Jira-to-implementation pipeline where every generated change is gated by its test suite
+          before review.
+        </p>
+      </div>
+      <aside class="factcard" aria-label="Quick facts">
+        <dl>
+          <div><dt>Location</dt><dd>Bengaluru, India · IST (UTC+5:30)</dd></div>
+          <div><dt>Current role</dt><dd>Senior Software Engineer, DigiCert</dd></div>
+          <div><dt>Focus</dt><dd>Supply-chain security · PKI · Identity · Distributed systems</dd></div>
+          <div><dt>Education</dt><dd>B.Tech Computer Science, GGIPU (2019)</dd></div>
+          <div><dt>Patent</dt><dd>Zero Trust Boot Infrastructure — pending</dd></div>
+          <div><dt>Languages</dt><dd>English, Hindi</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="panel" id="experience" aria-labelledby="exp-h">
+    <h2 id="exp-h"><span class="hash" aria-hidden="true">##</span> experience</h2>
+    <p class="panel-intro">Around eight years, three companies, one throughline: identity and trust in large systems.</p>
+
+    <ol class="timeline">
+      <li class="role reveal">
+        <div class="role-head">
+          <div class="role-id">
+            <span class="org-badge">
+              <img class="org-logo" src="./assets/digicert-logo.svg" alt="" width="85" height="24"
+                   loading="lazy" decoding="async" />
+            </span>
+            <h3>Senior Software Engineer <span class="sep" aria-hidden="true">@</span> <span class="org">DigiCert</span></h3>
+          </div>
+          <p class="when"><time datetime="2024-09">Sep 2024</time> — present · Bengaluru</p>
+        </div>
+      </li>
+
+      <li class="role reveal">
+        <div class="role-head">
+          <div class="role-id">
+            <span class="org-badge">
+              <img class="org-logo" src="./assets/blackhawk-logo.png" alt="" width="92" height="24"
+                   loading="lazy" decoding="async" />
+            </span>
+            <h3>Senior Software Engineer <span class="sep" aria-hidden="true">@</span> <span class="org">Blackhawk Network</span></h3>
+          </div>
+          <p class="when"><time datetime="2021-11">Nov 2021</time> — <time datetime="2024-09">Sep 2024</time> · Bengaluru</p>
+        </div>
+      </li>
+
+      <li class="role reveal">
+        <div class="role-head">
+          <div class="role-id">
+            <span class="org-badge">
+              <img class="org-logo" src="./assets/infosys-logo.svg" alt="" width="65" height="24"
+                   loading="lazy" decoding="async" />
+            </span>
+            <h3>Software Engineer <span class="sep" aria-hidden="true">@</span> <span class="org">Infosys Limited</span></h3>
+          </div>
+          <p class="when"><time datetime="2019-09">Sep 2019</time> — <time datetime="2021-11">Nov 2021</time> · Bengaluru</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="panel" id="work" aria-labelledby="work-h">
+    <h2 id="work-h"><span class="hash" aria-hidden="true">##</span> selected work</h2>
+    <p class="panel-intro">Open source and experiments. The production systems above aren't public, but these are.</p>
+
+    <div class="grid">
+      <article class="card reveal">
+        <p class="card-top"><span class="lang">Go</span><span class="kind">tooling</span></p>
+        <h3><a href="https://github.com/VinodAtwal/sievegate" target="_blank" rel="noopener noreferrer">sievegate ↗</a></h3>
+        <p>API contract testing that diffs a spec against the live implementation and logs discrepancies for triage — the same spec-drift problem release pipelines hit.</p>
+      </article>
+
+      <article class="card reveal">
+        <p class="card-top"><span class="lang">Go</span><span class="kind">k8s</span></p>
+        <h3><a href="https://github.com/VinodAtwal/admission-controller-poc" target="_blank" rel="noopener noreferrer">admission-controller-poc ↗</a></h3>
+        <p>Kubernetes admission controller proof-of-concept for policy-gated, attestation-checked workloads — admission decisions enforced against verified provenance.</p>
+      </article>
+
+      <article class="card reveal">
+        <p class="card-top"><span class="lang">Java</span><span class="kind">data</span></p>
+        <h3><a href="https://github.com/VinodAtwal/embedded-infinispan" target="_blank" rel="noopener noreferrer">embedded-infinispan ↗</a></h3>
+        <p>Spring Boot with an embedded Infinispan distributed cache cluster — a self-contained way to run cache-backed session state.</p>
+      </article>
+
+      <article class="card reveal">
+        <p class="card-top"><span class="lang">Shell</span><span class="kind">infra</span></p>
+        <h3><a href="https://github.com/VinodAtwal/maxscale-galera-k8s" target="_blank" rel="noopener noreferrer">maxscale-galera-k8s ↗</a></h3>
+        <p>MariaDB Galera multi-master cluster on Kubernetes fronted by MaxScale routing, with the quorum behaviour spelled out.</p>
+      </article>
+
+      <article class="card reveal">
+        <p class="card-top"><span class="lang">Java</span><span class="kind">library</span></p>
+        <h3><a href="https://github.com/VinodAtwal/BigCSVHandler" target="_blank" rel="noopener noreferrer">BigCSVHandler ↗</a></h3>
+        <p>Streaming approaches for reading and writing large files without exhausting heap.</p>
+      </article>
+
+      <article class="card reveal">
+        <p class="card-top"><span class="lang">Java</span><span class="kind">jvm</span></p>
+        <h3><a href="https://github.com/VinodAtwal/ObjectProxy" target="_blank" rel="noopener noreferrer">ObjectProxy ↗</a></h3>
+        <p>Runtime proxy creation via JDK dynamic proxies and cglib, with the tradeoffs of each approach compared.</p>
+      </article>
+    </div>
+
+    <p class="more"><a class="btn" href="https://github.com/VinodAtwal?tab=repositories" target="_blank" rel="noopener noreferrer">all repositories →</a></p>
+
+    <div class="live-gh" id="liveGh">
+      <p class="group">live · api.github.com/users/VinodAtwal</p>
+      <dl class="gh-grid">
+        <div><dt>public repos</dt><dd data-gh="repos">—</dd></div>
+        <div><dt>followers</dt><dd data-gh="followers">—</dd></div>
+        <div><dt>following</dt><dd data-gh="following">—</dd></div>
+        <div><dt>on GitHub since</dt><dd data-gh="since">—</dd></div>
+      </dl>
+      <p class="gh-note" id="ghNote">Fetching live numbers…</p>
+    </div>
+  </section>
+
+  <section class="panel" id="stack" aria-labelledby="stack-h">
+    <h2 id="stack-h"><span class="hash" aria-hidden="true">##</span> stack</h2>
+    <p class="panel-intro">Tools I reach for, roughly ordered by how often they show up in my work.</p>
+
+    <div class="stack-cols">
+      <div class="stack-col">
+        <p class="group">languages</p>
+        <ul class="tags">
+          <li>Java</li><li>Go</li><li>Python</li><li>SQL</li><li>Bash</li><li>Lua</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <p class="group">frameworks &amp; messaging</p>
+        <ul class="tags">
+          <li>Spring Boot</li><li>Spring Security</li><li>Micronaut</li><li>Hibernate</li><li>jOOQ</li><li>Apache Kafka</li><li>Apache APISIX</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <p class="group">data</p>
+        <ul class="tags">
+          <li>PostgreSQL</li><li>pgvector</li><li>MySQL</li><li>MongoDB</li><li>Elasticsearch</li><li>Redis</li><li>DynamoDB</li>
+        </ul>
+      </div>
+      <div class="stack-col accent-col">
+        <p class="group">supply-chain security</p>
+        <ul class="tags">
+          <li>SBOM / CBOM gen</li><li>SLSA attestations</li><li>VEX gen</li><li>SAST scanning</li><li>Vulnerability detection</li><li>SARIF reports</li><li>PQC management</li><li>Code signing</li><li>PKI</li><li>cosign</li><li>Policy gates</li>
+        </ul>
+      </div>
+      <div class="stack-col accent-col">
+        <p class="group">identity &amp; access</p>
+        <ul class="tags">
+          <li>OAuth2 / OIDC</li><li>WebAuthn / FIDO2</li><li>Sign in with Apple</li><li>Keycloak</li><li>Okta</li><li>Policy-based authorization</li><li>PCI-DSS</li><li>PAdES / XAdES</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <p class="group">cloud &amp; platform</p>
+        <ul class="tags">
+          <li>AWS (EKS, ECS, Lambda, KMS, S3, SQS, Kinesis)</li><li>Kubernetes</li><li>Docker</li><li>GitHub Actions</li><li>CloudFormation</li><li>Git</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <p class="group">AI engineering</p>
+        <ul class="tags">
+          <li>Agent workflows</li><li>RAG</li><li>Vector search</li><li>Tree-sitter</li><li>Context &amp; token optimisation</li><li>AI-assisted TDD</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <p class="group">observability &amp; testing</p>
+        <ul class="tags">
+          <li>New Relic</li><li>Grafana</li><li>Alerting</li><li>Integration testing</li><li>End-to-end automation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="writing" aria-labelledby="writing-h">
+    <h2 id="writing-h"><span class="hash" aria-hidden="true">##</span> writing</h2>
+    <p class="panel-intro">Articles I wrote to work things out — distributed systems, security, containers and databases. Newest five here.</p>
+
+    <ul class="posts">
+      <li class="reveal">
+        <a href="https://vinodatwal.medium.com/how-three-mariadb-servers-behave-like-one-the-truth-about-galera-and-maxscale-5671d0e5d990" target="_blank" rel="noopener noreferrer">
+          <span class="post-title">How Three MariaDB Servers Behave Like One: The Truth About Galera and MaxScale</span>
+          <span class="post-desc">TL;DR — if you read nothing else: Galera makes several MariaDB/MySQL servers behave like one logical primary component by (1) delivering writes to…</span>
+          <span class="post-meta"><time datetime="2026-09">Sep 2026</time> · replication · databases</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://vinodatwal.medium.com/kubernetes-admission-controllers-explained-what-they-are-and-how-they-actually-work-7e23ef4b5d82" target="_blank" rel="noopener noreferrer">
+          <span class="post-title">Kubernetes Admission Controllers, Explained: What They Are and How They Actually Work</span>
+          <span class="post-desc">The hidden checkpoint every workload passes through before it ever reaches your cluster — and the exact mechanics of how it intercepts, mutates,…</span>
+          <span class="post-meta"><time datetime="2026-07">Jul 2026</time> · kubernetes · security</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://vinodatwal.medium.com/i-went-down-a-rabbit-hole-on-merkle-trees-in-dynamo-and-cassandra-heres-what-i-found-9113b133e016" target="_blank" rel="noopener noreferrer">
+          <span class="post-title">I Went Down a Rabbit Hole on Merkle Trees in Dynamo and Cassandra — Here’s What I Found</span>
+          <span class="post-desc">Okay So Here’s the Thing That Bugged Me</span>
+          <span class="post-meta"><time datetime="2026-06">Jun 2026</time> · distributed systems · databases</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://vinodatwal.medium.com/layers-all-the-way-down-whats-actually-happening-when-you-run-a-container-52406a5ac46d" target="_blank" rel="noopener noreferrer">
+          <span class="post-title">Layers All the Way Down: What’s Actually Happening When You Run a Container</span>
+          <span class="post-desc">Everyone knows Docker images have “layers.” Almost nobody knows what that actually means — how they’re stored, how they’re shared, and how the VM…</span>
+          <span class="post-meta"><time datetime="2026-05">May 2026</time> · docker · containers · linux</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://vinodatwal.medium.com/sockets-are-not-magic-theyre-just-pipes-with-fancy-names-6cd2e179925e" target="_blank" rel="noopener noreferrer">
+          <span class="post-title">Sockets Are Not Magic — They’re Just Pipes With Fancy Names</span>
+          <span class="post-desc">You use sockets every single day. Every API call, every database query, every chat message — all of it. And yet most devs treat them like a black…</span>
+          <span class="post-meta"><time datetime="2026-05">May 2026</time> · networking · fundamentals</span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="more"><a class="btn" href="https://medium.com/@vinodatwal/" target="_blank" rel="noopener noreferrer">see all 10 on medium →</a></p>
+  </section>
+
+  <section class="panel" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h"><span class="hash" aria-hidden="true">##</span> contact</h2>
+
+    <div class="contact-grid">
+      <div>
+        <p class="lede">If you're working on supply-chain security, identity, or anything that has to be provably correct at scale, I'd like to hear about it.</p>
+        <p class="contact-actions">
+          <a class="btn primary" href="mailto:vinodatwal27@gmail.com?subject=Hello%20Vinod"><span aria-hidden="true">$</span> vinodatwal27@gmail.com</a>
+          <button class="btn" id="copyEmail" type="button" data-email="vinodatwal27@gmail.com">
+            <span aria-hidden="true">⧉</span> copy address
+          </button>
+        </p>
+        <p class="hint" id="copyStatus" role="status" aria-live="polite"></p>
+      </div>
+
+      <dl class="factcard">
+        <div><dt>Email</dt><dd><a href="mailto:vinodatwal27@gmail.com">vinodatwal27@gmail.com</a></dd></div>
+        <div><dt>Location</dt><dd>Bengaluru, India</dd></div>
+        <div><dt>Elsewhere</dt><dd>
+          <a href="https://github.com/VinodAtwal" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/vinod-atwal/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+          <a href="https://medium.com/@vinodatwal/" target="_blank" rel="noopener noreferrer">Medium</a>
+        </dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <footer>
+    <p class="foot-links">
+      <a href="https://github.com/VinodAtwal" target="_blank" rel="noopener noreferrer">github</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://www.linkedin.com/in/vinod-atwal/" target="_blank" rel="noopener noreferrer">linkedin</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://medium.com/@vinodatwal/" target="_blank" rel="noopener noreferrer">medium</a>
+      <span aria-hidden="true">·</span>
+      <a href="mailto:vinodatwal27@gmail.com?subject=R%C3%A9sum%C3%A9%20request">full résumé</a>
+    </p>
+    <p class="foot-meta">
+      <span>© <span id="year">2026</span> Vinod Atwal</span>
+      <span aria-hidden="true">·</span>
+      <span>Hand-written HTML &amp; CSS. Served from GitHub Pages.</span>
+    </p>
+  </footer>
+</main>
+
+<div class="sr-only" id="navLive" role="status" aria-live="polite"></div>
+
+<script src="./main.js" defer></script>
 </body>
 </html>

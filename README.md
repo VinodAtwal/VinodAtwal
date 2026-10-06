@@ -2,7 +2,7 @@
 
 # Vinod Atwal
 
-**Senior Software Engineer** — Software Supply-Chain Security, PKI & Identity Platforms.
+**Senior Software Engineer** — building Secure SDLC tooling, PKI & identity platforms.
 
 <p align="left">
   <a href="https://vinodatwal.github.io/VinodAtwal/">
@@ -11,7 +11,7 @@
   <a href="https://www.linkedin.com/in/vinod-atwal/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="https://vinodatwal.medium.com/">
+  <a href="https://medium.com/@vinodatwal/">
     <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium">
   </a>
   <a href="https://github.com/VinodAtwal">
@@ -23,15 +23,15 @@
 
 ## About me
 
-8+ years building distributed, secure backend systems — from greenfield design to production rollout, serving 100K+ users.
+around 8 years building distributed, secure backend systems — from greenfield design to production rollout, serving 100K+ users.
 
 **What I focus on**
 
-- **Software supply-chain security** — SLSA L3 compliance, SBOM/VEX, code signing, PKI, policy-gated releases
+- **Secure SDLC tooling** — developing tools across the software development lifecycle, end to end: SBOM generation, CBOM generation, SLSA attestation generation, SAST scanning and vulnerability detection, SARIF report generation, VEX generation, PQC, vulnerability management, code signing, PKI, policy-gated releases
 - **Identity & access** — OAuth2/OIDC, passkeys (WebAuthn/FIDO2), fine-grained authorization
 - **Cloud-native infrastructure** — Java/Go services on AWS & Kubernetes, event-driven and fully observable
 
-I write deep-dive engineering articles on [Medium](https://vinodatwal.medium.com/) about distributed systems, security, and databases.
+I write deep-dive engineering articles on [Medium](https://medium.com/@vinodatwal/) about distributed systems, security, and databases.
 
 ---
 
@@ -69,7 +69,7 @@ I write deep-dive engineering articles on [Medium](https://vinodatwal.medium.com
   <tr>
     <td width="50%">
       <b><a href="https://github.com/VinodAtwal/BigCSVHandler">BigCSVHandler</a></b> · <b>Data</b><br>
-      Approaches for efficient reading and writing of very large files.<br>
+      Approaches for efficient reading and writing of large files.<br>
       <a href="https://github.com/VinodAtwal/BigCSVHandler"><img alt="stars" src="https://img.shields.io/github/stars/VinodAtwal/BigCSVHandler?style=flat&label=stars&color=22d3ee"></a>
     </td>
     <td width="50%">
@@ -109,8 +109,10 @@ I write deep-dive engineering articles on [Medium](https://vinodatwal.medium.com
 
 <p align="center">
   <b>Security, cloud &amp; identity</b><br>
-  <img src="https://img.shields.io/badge/SLSA%20L3-0ea5e9?style=for-the-badge" alt="SLSA L3">
-  <img src="https://img.shields.io/badge/SBOM%20%2F%20VEX-22d3ee?style=for-the-badge" alt="SBOM/VEX">
+  <img src="https://img.shields.io/badge/Supply%20Chain%20Tooling-0ea5e9?style=for-the-badge" alt="Supply chain tooling">
+  <img src="https://img.shields.io/badge/SBOM%20%2F%20CBOM%20%2F%20VEX-22d3ee?style=for-the-badge" alt="SBOM / CBOM / VEX">
+  <img src="https://img.shields.io/badge/SLSA%20Attestation%20Gen-0f766e?style=for-the-badge" alt="SLSA attestation generation">
+  <img src="https://img.shields.io/badge/SAST%20%2F%20SARIF%20%2F%20VEX-6d28d9?style=for-the-badge" alt="SAST / SARIF / VEX">
   <img src="https://img.shields.io/badge/PKI%20%26%20Code%20Signing-7c3aed?style=for-the-badge" alt="PKI & Code Signing">
   <img src="https://img.shields.io/badge/OAuth2%20%2F%20OIDC-312e81?style=for-the-badge" alt="OAuth2/OIDC">
   <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black" alt="AWS">
@@ -119,27 +121,12 @@ I write deep-dive engineering articles on [Medium](https://vinodatwal.medium.com
 
 ---
 
-## GitHub statistics
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
-    <img src="./profile/stats-light.svg" alt="GitHub stats">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/top-langs-dark.svg">
-    <img src="./profile/top-langs-light.svg" alt="Top languages">
-  </picture>
-</p>
-
----
-
 ## Recent posts
 
-- **[How Three MariaDB Servers Behave Like One: The Truth About Galera and MaxScale](https://vinodatwal.medium.com/how-three-mariadb-servers-behave-like-one-the-truth-about-galera-and-maxscale-5671d0e5d990)** — synchronous multi-master replication, quorum math, and MaxScale routing.
-- **[Kubernetes Admission Controllers, Explained](https://vinodatwal.medium.com/kubernetes-admission-controllers-explained-what-they-are-and-how-they-actually-work-7e23ef4b5d82)** — what they are and how they actually work.
-- **[A Deep Dive Into Merkle Trees in Dynamo and Cassandra](https://vinodatwal.medium.com/i-went-down-a-rabbit-hole-on-merkle-trees-in-dynamo-and-cassandra-heres-what-i-found-9113b133e016)** — how Merkle trees make anti-entropy reconciliation work.
+- **[How Three MariaDB Servers Behave Like One: The Truth About Galera and MaxScale](https://medium.com/@vinodatwal/how-three-mariadb-servers-behave-like-one-the-truth-about-galera-and-maxscale-5671d0e5d990)** — synchronous multi-master replication, quorum math, and MaxScale routing.
+- **[Kubernetes Admission Controllers, Explained](https://medium.com/@vinodatwal/kubernetes-admission-controllers-explained-what-they-are-and-how-they-actually-work-7e23ef4b5d82)** — what they are and how they actually work.
+- **[A Deep Dive Into Merkle Trees in Dynamo and Cassandra](https://medium.com/@vinodatwal/i-went-down-a-rabbit-hole-on-merkle-trees-in-dynamo-and-cassandra-heres-what-i-found-9113b133e016)** — how Merkle trees make anti-entropy reconciliation work.
 
 <p align="right">
-  <a href="https://vinodatwal.medium.com/">More on Medium →</a>
+  <a href="https://medium.com/@vinodatwal/">More on Medium →</a>
 </p>
