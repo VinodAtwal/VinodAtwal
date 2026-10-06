@@ -452,7 +452,7 @@
         "<li>" + kbd("whoami") + " — who is behind this terminal</li>",
         "<li>" + kbd("about") + " — background, in three paragraphs' worth of lines</li>",
         "<li>" + kbd("experience") + " — the last eight years</li>",
-        "<li>" + kbd("work") + " — open source repositories</li>",
+        "<li>" + kbd("projects") + " — open source repositories</li>",
         "<li>" + kbd("stack") + " — languages, frameworks and tooling</li>",
         "<li>" + kbd("writing") + " — engineering articles</li>",
         "<li>" + kbd("github") + " — live GitHub numbers</li>",
@@ -510,7 +510,7 @@
       ].join("");
     },
 
-    work: function () {
+    projects: function () {
       var repos = [
         ["sievegate", "API contract testing that diffs a spec against the live implementation"],
         ["admission-controller-poc", "policy-gated, attestation-checked Kubernetes workloads"],
@@ -567,7 +567,7 @@
       var repos = ghState.repos === null ? "—" : ghState.repos;
       var followers = ghState.followers === null ? "—" : ghState.followers;
       var following = ghState.following === null ? "—" : ghState.following;
-      var src = ghState.error ? "unavailable (rate limited) — see the work section" :
+      var src = ghState.error ? "unavailable (rate limited) — see the projects section" :
         ghState.cached ? "cached" : "live";
       return [
         '<dl class="tdl">',
@@ -711,7 +711,7 @@
     "hi": "help", "hello": "help", "?": "help", "man": "help",
     bio: "about", profile: "whoami", cv: "resume",
     exp: "experience", jobs: "experience", work_History: "experience",
-    projects: "work", repos: "work", repo: "work",
+    work: "projects", repos: "projects", repo: "projects",
     skills: "stack", tools: "stack", tech: "stack",
     blog: "writing", posts: "writing", articles: "writing",
     gh: "github", mail: "contact", email: "contact", reach: "contact",
