@@ -1190,30 +1190,69 @@ footer {
 
   .js .nav-toggle { display: flex; }
 
-  .nav {
+  /* The toggle stays in the header; only the link list becomes the drawer.
+     (Collapsing .nav itself used to clip the toggle, hiding it.) */
+  .js .nav-list {
     position: fixed;
     inset: var(--header-h) 0 auto;
     margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
     background: var(--panel-solid);
-    border-bottom: 1px solid var(--line);
-    box-shadow: var(--shadow-lift);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    visibility: hidden;
+    transition: max-height 0.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.3s;
   }
 
-  .nav.open { max-height: 340px; }
+  .js .nav.open .nav-list {
+    max-height: 340px;
+    visibility: visible;
+    padding: 8px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-lift);
+    transition: max-height 0.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s;
+  }
 
-  .nav-list { flex-direction: column; align-items: stretch; gap: 0; padding: 8px; }
-
-  .nav-list a {
+  .js .nav-list a {
     padding: 12px 12px;
     font-size: 0.9rem;
     border-bottom: 1px solid var(--line-2);
     border-radius: 0;
   }
 
-  .nav-list li:last-child a { border-bottom: 0; }
+  .js .nav-list li:last-child a { border-bottom: 0; }
+
+  /* Without JS the toggle can't open a drawer: let the header wrap
+     and show the section links as a static bar instead. */
+  html:not(.js) .topbar-inner {
+    height: auto;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    row-gap: 2px;
+  }
+
+  html:not(.js) .nav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  html:not(.js) .nav-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0 2px;
+    padding: 0;
+  }
+
+  html:not(.js) .nav-list a {
+    padding: 6px 9px;
+    font-size: 0.78rem;
+    border-bottom: 0;
+    border-radius: 7px;
+  }
 
   .topbar-actions { margin-left: 0; }
 
